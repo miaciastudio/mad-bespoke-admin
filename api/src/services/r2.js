@@ -3,11 +3,22 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
+// Try loading root .env first, then apps/api/.env
+const workspaceEnv = path.resolve(__dirname, '../../../.env');
+const localEnv = path.resolve(__dirname, '../../.env');
+
+if (fs.existsSync(workspaceEnv)) {
+  dotenv.config({ path: workspaceEnv });
+} else if (fs.existsSync(localEnv)) {
+  dotenv.config({ path: localEnv });
+} else {
+  dotenv.config();
+}
 
 const accountId = process.env.CLOUDFLARE_ACCOUNT_ID || '3a2f834554bac72ffd41a784adaa8a52';
 const accessKeyId = process.env.R2_ACCESS_KEY_ID || 'd7b9df9a0f58418f08df710c09fab9b8';
@@ -58,12 +69,10 @@ export async function uploadToR2(buffer, key, contentType = 'image/jpeg') {
 
   await r2Client.send(command);
 
-  // If a public custom domain is configured, use it. Otherwise serve through the API media proxy.
   if (publicDomain) {
     return `${publicDomain.replace(/\/$/, '')}/${key}`;
   }
   
-  // API media proxy URL (ensures images load seamlessly without exposing credentials)
   return `/api/media/${key}`;
 }
 
@@ -78,7 +87,6 @@ export async function generatePresignedUploadUrl(key, contentType = 'image/jpeg'
   });
 
   const uploadUrl = await getSignedUrl(r2Client, command, { expiresIn });
-  
   const publicUrl = publicDomain ? `${publicDomain.replace(/\/$/, '')}/${key}` : `/api/media/${key}`;
 
   return {

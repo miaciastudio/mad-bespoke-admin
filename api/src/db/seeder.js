@@ -1559,8 +1559,8 @@ export async function seedDatabase() {
   await initSchema();
 
   // Clear existing items for fresh seed
-  await db.execute('DELETE FROM categories');
   await db.execute('DELETE FROM products');
+  await db.execute('DELETE FROM categories');
   await db.execute('DELETE FROM settings');
 
   // Insert categories
