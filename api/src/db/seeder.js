@@ -8,7 +8,7 @@ export const categoriesData = [
     icon: '🎁',
     description: 'Thoughtful custom gifts crafted with love, precision, and heartfelt personal touches.',
     display_order: 1,
-    image_url: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/personalized-gifts.jpg',
   },
   {
     id: 'pens-stationery',
@@ -16,7 +16,7 @@ export const categoriesData = [
     icon: '✒️',
     description: 'Precision-engraved luxury metal, zari, and wooden pens for professionals and connoisseurs.',
     display_order: 2,
-    image_url: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/pens-stationery.jpg',
   },
   {
     id: 'keychains',
@@ -24,7 +24,7 @@ export const categoriesData = [
     icon: '🔑',
     description: 'Custom name-engraved metal, LED, wooden, and acrylic keychains built to last.',
     display_order: 3,
-    image_url: 'https://images.unsplash.com/photo-1614312015093-6c7b9c6f2c7d?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/keychains.jpg',
   },
   {
     id: 'leather-gifts',
@@ -32,7 +32,7 @@ export const categoriesData = [
     icon: '💼',
     description: 'Bespoke faux & premium leather wallets, passport sleeves, sunglass cases, and hampers.',
     display_order: 4,
-    image_url: 'https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/leather-gifts.jpg',
   },
   {
     id: 'stainless-steel',
@@ -40,7 +40,7 @@ export const categoriesData = [
     icon: '✨',
     description: 'Sleek stainless steel kadas, 4-sided secret pendant bars, and custom charm jewellery.',
     display_order: 5,
-    image_url: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/stainless-steel.jpg',
   },
   {
     id: 'bottles-mugs',
@@ -48,7 +48,7 @@ export const categoriesData = [
     icon: '☕',
     description: 'Smart LED temperature bottles, hot/cold vacuum flask gift sets, and custom ceramic mugs.',
     display_order: 6,
-    image_url: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/bottles-mugs.jpg',
   },
   {
     id: 'diaries',
@@ -56,7 +56,7 @@ export const categoriesData = [
     icon: '📔',
     description: 'Executive leather planner diaries with 4-year calendar and matching luxury pen gift sets.',
     display_order: 7,
-    image_url: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/diaries.jpg',
   },
   {
     id: 'gift-sets',
@@ -64,7 +64,7 @@ export const categoriesData = [
     icon: '✨',
     description: 'Curated 2-in-1, 3-in-1, and 4-in-1 bespoke gift combos packaged in luxury boxes.',
     display_order: 8,
-    image_url: 'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/gift-sets.jpg',
   },
   {
     id: 'apparel',
@@ -72,7 +72,7 @@ export const categoriesData = [
     icon: '👕',
     description: 'Premium heavyweight cotton hoodies, 200 GSM oversized tees, and custom dryfit collared shirts.',
     display_order: 9,
-    image_url: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/apparel.jpg',
   },
   {
     id: 'home-lifestyle',
@@ -80,7 +80,7 @@ export const categoriesData = [
     icon: '🏠',
     description: 'Plush velvet fur cushions, high-precision gaming mouse pads, and vibrant fridge magnets.',
     display_order: 10,
-    image_url: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80',
+    image_url: '/categories/home-lifestyle.jpg',
   },
 ];
 

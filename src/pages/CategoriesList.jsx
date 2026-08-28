@@ -75,7 +75,17 @@ export default function CategoriesList() {
           <div key={c.id} className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-3 flex flex-col justify-between">
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-3">
-                <span className="text-3xl p-2 bg-canvas rounded-xl">{c.icon || '🎁'}</span>
+                <div className="w-12 h-12 rounded-xl overflow-hidden bg-gray-50 border border-gray-200 p-0.5 shrink-0 flex items-center justify-center">
+                  <img
+                    src={c.image_url || `/categories/${c.id}.jpg`}
+                    alt={c.name}
+                    className="w-full h-full object-cover rounded-lg"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = `/categories/${c.id}.jpg`;
+                    }}
+                  />
+                </div>
                 <div>
                   <h3 className="font-serif font-bold text-base text-gray-900">{c.name}</h3>
                   <span className="text-[10px] text-gray-400 font-mono">Slug: {c.id}</span>
