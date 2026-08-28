@@ -28,8 +28,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['"Fredoka"', '"Paytone One"', 'cursive', 'sans-serif'],
-        display: ['"Fredoka"', '"Paytone One"', 'cursive', 'sans-serif'],
+        serif: ['"Fredoka"', 'cursive', 'sans-serif'],
+        display: ['"Fredoka"', 'cursive', 'sans-serif'],
         sans: ['"Fredoka"', '"Plus Jakarta Sans"', 'sans-serif'],
       },
     },
